@@ -9,11 +9,13 @@
 // --- Conditional Dependency Management ---
 #ifdef USE_CLIST
     #include <clist.h>
-    #include <ariadne.h>
 #else
     // Fallback definitions so the code compiles without the headers
     typedef char** List;
     #define CLIST_NULL NULL
+#endif
+#ifdef USE_ARIADNE
+    #include <ariadne.h>
 #endif
 
 static inline int isKeyword(const char* compared, char keywordsArray[256][256], int count) {
@@ -49,7 +51,7 @@ static inline List parse(char* path, char* keywords) {
         return CLIST_NULL;
     }
     
-    #ifdef USE_CLIST
+    #ifdef USE_ARIADNE
         trimWhitespace(keywords);
     #else
         char* end;
