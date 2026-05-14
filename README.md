@@ -21,5 +21,5 @@ Otherwise, you can just include it normally
 Download it from this repository and add the header to your project or use `cl -i ccsv-nodep` or `cl -i ccsv` in your console if you have CLearning installed.
 
 ### Version
-1.0.0 - CCSV, .csv parser
+1.0.0b - CCSV, .csv parser
 Author: Nahum Naranjo
